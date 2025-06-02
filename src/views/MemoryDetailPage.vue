@@ -1,12 +1,17 @@
 <template>
   <base-layout :pageTitle="memory?.title" page-default-back-link="/memories">
-    <h2 v-if="!memory">Memory not found.</h2>
-    <h2 v-else>{{ memory.description }}</h2>
+    <ion-img :src="memory?.image" :alt="memory?.title" />
+    <h1 style="font-weight: bold" class="ion-text-center">
+      {{ memory?.title }}
+    </h1>
+    <p class="ion-text-center">{{ memory?.description }}</p>
   </base-layout>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
+
+import { IonImg } from "@ionic/vue";
 
 import { useRoute } from "vue-router";
 

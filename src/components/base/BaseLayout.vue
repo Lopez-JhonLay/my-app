@@ -28,7 +28,7 @@ import {
 } from "@ionic/vue";
 
 const props = defineProps<{
-  pageTitle: string;
+  pageTitle?: string;
   pageDefaultBackLink?: string;
 }>();
 </script>
